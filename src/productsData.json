@@ -1,0 +1,118 @@
+[
+  {
+      "id": 1,
+      "name": "Nike Women's Pegasus 41",
+      "price": "$140",
+      "image": "/nike-womanpegasus41.jpg",
+      "gender":"Women"
+    
+  },
+    
+    {
+      "id": 2,
+      "name": "Nike Air Force 1",
+      "price": "$100",
+      "image": "/nike-airforce1.jpg",
+      "gender":"Men"
+    },
+    {
+      "id": 3,
+      "name": "Nike Air Jordan 1",
+      "price": "$120",
+      "image": "/nike-airjordon1.jpg",
+      "gender":"Men"
+    },
+    {
+      "id": 4,
+      "name": "Nike Air Max SC",
+      "price": "$120",
+      "image": "/nike-airmaxsc.jpg",
+      "gender":"Women"
+    },
+    {
+      "id": 5,
+      "name": "Nike Air Dunk Low",
+      "price": "$120",
+      "image": "/nike-airdunklow.jpg",
+      "gender":"Women"
+    },
+    {
+      "id": 6,
+      "name": "Nike Retro High",
+      "price": "$120",
+      "image": "/nike-jordanblue.jpg",
+      "gender":"Men"
+    },
+    {
+      "id": 7,
+      "name": "Nike Air Max 270",
+      "price": "$120",
+      "image": "/nike-air270.jpg",
+      "gender":"Women"
+    },
+    {
+      "id": 8,
+      "name": "Nike Air Force Low Shadow",
+      "price": "$120",
+      "image": "/nike-spruce.jpg",
+      "gender":"Women"
+    },
+    {
+      "id": 9,
+      "name": "Nike Dunk Low Soft Grey/Pink",
+      "price": "$120",
+      "image": "/nike-softgrey.jpg",
+      "gender":"Women"
+    },
+    {
+      "id": 10,
+      "name": "Nike Jordan 1 Mid",
+      "price": "$120",
+      "image": "/nike-jordanmid.jpg",
+      "gender":"Men"
+    },
+    {
+      "id": 11,
+      "name": "Nike Air Force Low",
+      "price": "$150",
+      "image": "/nike-green.jpg",
+      "gender":"Men"
+    },
+    {
+      "id": 12,
+      "name": "Nike Air Zoom GT cut",
+      "price": "$150",
+      "image": "/nike-airzoom.jpg",
+      "gender":"Men"
+    },
+    {
+      "id": 13,
+      "name": "Nike Blaze Mid '77",
+      "price": "$110",
+      "image": "/nike-kidsmid.jpg",
+      "gender":"Kids"
+    },
+    {
+      "id": 14,
+      "name": "Nike Air Jordan Retro 4 ",
+      "price": "$110",
+      "image": "/nike-kidsretro.jpg",
+      "gender":"Kids"
+    },
+    {
+      "id": 15,
+      "name": "Nike Jordan ",
+      "price": "$110",
+      "image": "/nike-kidsblue.jpg",
+      "gender":"Kids"
+    }
+
+
+
+
+   
+   
+
+    
+  ]
+  
