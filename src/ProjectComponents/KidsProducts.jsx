@@ -14,7 +14,7 @@ const KidsProducts = () => {
     }, []); 
   
     return (
-        <div className='grid grid-cols-3 gap-8 mx-32 mt-2'>
+        <div className='grid md:grid-cols-3 grids-cols-2 gap-8 md:mx-32 mt-2'>
         {products.map(product => (
           <div key={product.id} className="product-card border p-4 rounded-xl flex flex-col justify-between items-stretch">
             <img src={product.image} alt={product.name} className='mb-4'/>

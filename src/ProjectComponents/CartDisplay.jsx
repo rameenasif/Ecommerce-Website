@@ -1,8 +1,9 @@
 import React,{useContext,useState} from 'react'
 import { CartContext } from '../Contexts/CartContext.jsx';
+import ProductCards from './ProductCards.jsx';
 
 const CartDisplay = () => {
-    const { cartItems } = useContext(CartContext);
+    const { cartItems, removeFromCart } = useContext(CartContext);
     
    
 
@@ -16,7 +17,7 @@ const CartDisplay = () => {
                     <p>{item.name}</p>
                    <div className='flex flex-row justify-between'>
                    <p>{item.price}</p>
-                  <button className='bg-transparent'>
+                  <button className='bg-transparent' onClick={()=>removeFromCart(item)}>
                   <img src='./public/d.png' className='w-5'/>
                   </button>
                     </div>

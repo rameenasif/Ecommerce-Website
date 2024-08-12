@@ -30,3 +30,7 @@
 .ArchivoBlack{
   font-family:'Archivo-Black';
 }
+.ronaldo-bg{
+  background-image:url('./public/red.jpg');
+  background-repeat:no repeat;
+}

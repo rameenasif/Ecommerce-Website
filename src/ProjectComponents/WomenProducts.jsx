@@ -14,14 +14,14 @@ const MenProducts = () => {
     }, []); 
   
     return (
-        <div className='grid grid-cols-3 gap-8 mx-32 mt-2'>
+        <div className='grid md:grid-cols-3 grid-cols-2 gap-8 md:mx-32 mt-2'>
         {products.map(product => (
           <div key={product.id} className="product-card border p-4 rounded-xl flex flex-col justify-between items-stretch">
             <img src={product.image} alt={product.name} className='mb-4'/>
             <h3 className='text-lg font-semibold'>{product.name}</h3>
             <div className='flex flex-row justify-between'>
             <p className='font-bold'>{product.price}</p>
-            <button className=' border border-transparent rounded-xl text-white bg-black p-2 hover:bg-white hover:text-black hover:border-black' onClick={() => addToCart(product)}>Add to cart</button>
+            <button className=' border border-transparent rounded-xl text-white bg-black md:p-2 p-1 hover:bg-white hover:text-black hover:border-black' onClick={() => addToCart(product)}>Add to cart</button>
             </div>
           </div>
         ))}
