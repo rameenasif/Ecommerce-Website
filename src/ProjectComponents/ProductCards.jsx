@@ -1,9 +1,11 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect, useContext} from 'react'
 import productsData from '../productsData.json';
+import { CartContext } from '../Contexts/CartContext.jsx';
 
 
 const ProductCards = () => {
     const [products, setProducts] = useState([]);
+    const{addToCart}=useContext(CartContext)
   
     useEffect(() => {
       setProducts(productsData);
@@ -17,7 +19,7 @@ const ProductCards = () => {
             <h3 className='text-lg font-semibold'>{product.name}</h3>
             <div className='flex flex-row justify-between'>
             <p className='font-bold'>{product.price}</p>
-            <button className='rounded-xl text-white bg-black p-2'>Add to cart</button>
+            <button className=' border border-transparent rounded-xl text-white bg-black p-2 hover:bg-white hover:text-black hover:border-black' onClick={() => addToCart(product)}>Add To Cart</button>
             </div>
           </div>
         ))}
