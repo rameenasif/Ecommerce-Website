@@ -10,6 +10,7 @@ import MenProducts from './ProjectComponents/MenProducts.jsx'
 import WomenProducts from './ProjectComponents/WomenProducts.jsx'
 import KidsProducts from './ProjectComponents/KidsProducts.jsx'
 import { CartProvider } from './Contexts/CartContext.jsx'
+import Footer from './ProjectComponents/Footer.jsx'
 function App() {
   const [count, setCount] = useState(0)
 
@@ -26,6 +27,8 @@ function App() {
           <Route path="/women" element={<WomenProducts />} />
           <Route path="/kids" element={<KidsProducts />} />
         </Routes>
+        <Footer/>
+        
       </CartProvider>
     </Router>
   );

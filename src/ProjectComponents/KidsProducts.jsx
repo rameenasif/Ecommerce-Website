@@ -23,6 +23,7 @@ const KidsProducts = () => {
             <p className='font-bold'>{product.price}</p>
             <button className=' border border-transparent rounded-xl text-white bg-black p-2 hover:bg-white hover:text-black hover:border-black' onClick={() => addToCart(product)}>Add to cart</button>
             </div>
+            <button className='text-black mt-0  mr-80 background-transparent  hover:underline underline-offset-4 hover:text-black hover:decoration-black'>View</button>
           </div>
         ))}
       </div>

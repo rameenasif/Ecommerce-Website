@@ -10,12 +10,19 @@
   justify-content: center; 
   align-items: center; 
 }
-.product-card {
-  margin: 0; /* Ensure no extra margin */
-  padding: 16px; /* Consistent padding */
-  box-sizing: border-box; /* Ensure padding is included in the height */
+@media (max-width: 400px) {
+  .first-banner {
+    height: 60vh; 
+    background-size: contain; 
+    padding: 10px; 
+  }
 }
-/* Assuming you have a CSS file or inline styles */
+.product-card {
+  margin: 0; 
+  padding: 16px;
+  box-sizing: border-box; 
+}
+
 .cart-popup {
   position: absolute;
   top: 100%; 
