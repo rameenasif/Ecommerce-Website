@@ -1,26 +1,73 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react';
 
 
 const HomePage = () => {
+  const [currentBanner, setCurrentBanner] = useState(1);
+
+  useEffect(() => {
+      const interval = setInterval(() => {
+          setCurrentBanner(prevBanner => (prevBanner === 1 ? 2 : 1));
+      }, 5000); // Change banner every 5 seconds
+
+      return () => clearInterval(interval);
+  }, []);
+
   return (
-    <div className='flex flex-col'>
-      <div className='first-banner'>
-        <div className='md:mr-[950px] md:block hidden md:ml-[80px] text-white text-[11px] md:text-[15px]'>
-          <p className='font-bold text-xl'>A SPIDERMAN ORIGIN STORY</p>
-          <p className='font-bold'>Nike Air Jordan 1</p>
-          <p>
-            Across the Spider-Verse edition—where legendary design<br />
-            meets superhero flair. Step into the multiverse <br />
-            with these exclusive kicks that combine style <br />
-            and web-slinging inspiration.
-          </p>
-          <button className='text-black font-bold mt-4 bg-white rounded-full py-1 px-4 border border-transparent hover:bg-black hover:text-white hover:border-white'>
-            Buy Now
-          </button>
-        </div>
+      <div className='flex flex-col'>
+          <div className='relative'>
+              {currentBanner === 1 && (
+                  <div className='first-banner'>
+                      <div className='md:mr-[950px] md:block hidden md:ml-[80px] text-white text-[11px] md:text-[15px]'>
+                          <p className='font-bold text-xl'>A SPIDERMAN ORIGIN STORY</p>
+                          <p className='font-bold'>Nike Air Jordan 1</p>
+                          <p>
+                              Across the Spider-Verse edition—where legendary design<br />
+                              meets superhero flair. Step into the multiverse <br />
+                              with these exclusive kicks that combine style <br />
+                              and web-slinging inspiration.
+                          </p>
+                          <button className='text-black font-bold mt-4 bg-white rounded-full py-1 px-4 border border-transparent hover:bg-black hover:text-white hover:border-white'>
+                              Buy Now
+                          </button>
+                      </div>
+                  </div>
+              )}
+              {currentBanner === 2 && (
+                  <div className='second-banner'>
+                      <div className='md:mr-[950px] md:block hidden md:ml-[30px] text-white text-[11px] md:text-[15px]'>
+                          <p className='font-bold text-xl'>ROYAL RE-IMAGINED</p>
+                          <p className='font-bold'>Nike Jordan Retro Royal</p>
+                          <p>
+                          Step up your game with the Nike Jordan Retro<br></br> Royal Blue—where classic style meets<br></br> modern flair in a bold, iconic hue
+                          </p>
+                          <button className='text-black font-bold mt-4 bg-white rounded-full py-1 px-4 border border-transparent hover:bg-black hover:text-white hover:border-white'>
+                              Shop Now
+                          </button>
+                      </div>
+                  </div>
+              )}
+          </div>
+      <div className='flex flex-row justify-center mt-8 align-center space-x-4 bg-black mx-[640px] rounded-full px-2'>
+      <a href="https://www.facebook.com/nike" target="_blank" rel="noopener noreferrer">
+        <button className='bg-transparent'>
+            <img src='./public/facebook.png' className='w-5 h-10 mt-1' alt="Facebook" />
+        </button>
+    </a>
+    <a href="https://twitter.com/nike" target="_blank" rel="noopener noreferrer">
+    <button className='bg-transparent'>
+        <img src='./public/twitter.png' className='w-10 mt-2' alt="Twitter" />
+    </button>
+</a>
+
+<a href="https://www.instagram.com/nike" target="_blank" rel="noopener noreferrer">
+    <button className='bg-transparent'>
+        <img src='./public/instagram.png' className='w-10 mt-1' alt="Instagram" />
+    </button>
+</a>
+
       </div>
 
-      <div className='md:mt-16 mt-2 flex flex-col md:flex-row relative ronaldo-bg'>
+      <div className='md:mt-16 mt-1 flex flex-col md:flex-row relative ronaldo-bg'>
         <div className='bg-white md:absolute ml-8 md:ml-32 px-4 flex flex-col'>
           <h2 className='font-bold md:text-2xl text-center mt-12'>Cristiano Ronaldo and Nike</h2>
           <p className='text-center font-bold'>A Winning Partnership</p>
@@ -71,10 +118,10 @@ const HomePage = () => {
       <p className='text-center text-lg'>Meet the next generation of Nike Air. Engineered to the exact <br /> specification of championship athletes.</p>
 
       <div className='flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6 mt-2'>
-        <button className='border border-transparent text-white font-bold rounded-full bg-black md:mx-0 mx-28 md:px-4 py-1 hover:border-black hover:text-black hover:bg-white'>
+        <button className='border border-transparent text-xl text-white font-bold rounded-full bg-black md:mx-0 mx-28 md:px-6 py-1 hover:border-black hover:text-black hover:bg-white'>
           Experience Air
         </button>
-        <button className='border border-transparent text-white font-bold rounded-full bg-black  md:mx-0 mx-28 px-4 py-1 hover:border-black hover:text-black hover:bg-white'>
+        <button className='border border-transparent text-xl text-white font-bold rounded-full bg-black  md:mx-0 mx-28 px-6 py-1 hover:border-black hover:text-black hover:bg-white'>
           Shop Air
         </button>
       </div>

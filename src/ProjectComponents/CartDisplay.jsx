@@ -1,17 +1,34 @@
 import React, { useContext, useState } from 'react'
 import { CartContext } from '../Contexts/CartContext.jsx'
+import CheckoutDisplay from './CheckoutDisplay.jsx'
+import { useNavigate } from 'react-router-dom'
 
 const CartDisplay = () => {
     const { cartItems, removeFromCart } = useContext(CartContext)
     const [count, setCount] = useState(1)
+    const navigate = useNavigate() 
 
     const increaseCount = () => {
-        setCount(count+1)
+        setCount(count + 1)
     }
 
     const decreaseCount = () => {
-        setCount(count-1)
+        setCount(count - 1)
     }
+
+    const getTotalBill = () => {
+        return cartItems
+            .map(item => parseFloat(item.price.replace('$', ''))) //price is a string in productsData file
+            .reduce((total, price) => total + price, 0)
+        
+    }
+
+    const handleCheckout=()=>{
+        const totalBill = getTotalBill();
+    navigate('/checkout', { state: { cartItems, totalBill } })
+        
+    }
+    
 
     return (
         <div className='cart-popup bg-white p-4 rounded-xl shadow-lg'>
@@ -38,6 +55,13 @@ const CartDisplay = () => {
                 ) : (
                     <p>Your cart is empty.</p>
                 )}
+            </div>
+            <div className='mt-4 font-bold'>
+                <p>Total Bill: ${getTotalBill()}</p>
+            </div>
+            <div className='flex flex-col justify-center mt-4'>
+            <button className='text-white bg-black px-4 rounded-lg py-2 border-transparent text-lg hover:text-yellow-500 hover:border-2 hover:border-yellow-500 'onClick={handleCheckout}>Checkout</button>
+          
             </div>
         </div>
     )

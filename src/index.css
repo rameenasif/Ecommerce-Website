@@ -17,6 +17,15 @@
     padding: 10px; 
   }
 }
+.second-banner {
+  background-image: url('/bluebanner5.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh; 
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
 .product-card {
   margin: 0; 
   padding: 16px;
@@ -41,3 +50,4 @@
   background-image:url('./public/red.jpg');
   background-repeat:no repeat;
 }
+

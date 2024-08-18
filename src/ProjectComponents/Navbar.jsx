@@ -1,22 +1,31 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import CartDisplay from './CartDisplay.jsx'
+import { useNavigate } from 'react-router-dom'
+
 
 const Navbar = () => {
   const [isCartVisible, setIsCartVisible] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const navigate=useNavigate()
 
   const handleCartVisibility = () => {
-    setIsCartVisible(!isCartVisible);
+    setIsCartVisible(!isCartVisible)
   }
 
   const handleHamburger = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(!isMenuOpen)//triggers the dropdown menu
   }
+  const handleContactUs=()=>
+    {
+      navigate('/contactus')
+
+    }
+  
 
   return (
     <div className='bg-black relative'>
-      <nav className='flex flex-row px-10 justify-between items-center'>
+      <nav className='flex flex-row px-10 justify-between items-center w-full'>
         <div className='flex-shrink-0'>
           <img src="/nike-logo.png" className='w-15 h-10' alt="Nike Logo" />
         </div>
@@ -57,7 +66,10 @@ const Navbar = () => {
           <li className='hover:underline underline-offset-4'><Link to="/products">All Products</Link></li>
         </ul>
 
-        <div className='flex-shrink-0 relative'>
+        <div className='flex-shrink-0 relative space-x-6'>
+          <button className='text-white' onClick={()=>handleContactUs()}>
+          <img src='./public/contactus.png' className='w-8'/>
+          </button>
           <button onClick={handleCartVisibility}>
             <img src='./public/cart.jpg' className='w-10' alt="Cart" />
           </button>

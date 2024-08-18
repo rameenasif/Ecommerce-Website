@@ -12,7 +12,7 @@ export const CartProvider = ({ children }) => {
     
 
     const removeFromCart=(product)=>{
-        const filteredCartItems=(cartItems.filter(cartItem => cartItem !== product))
+        const filteredCartItems=(cartItems.filter(cartItem => cartItem !== product))//the products that return true get added to filtered array
         setCartItems(filteredCartItems)
     }
 
